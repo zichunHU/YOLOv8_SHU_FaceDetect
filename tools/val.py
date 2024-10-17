@@ -2,15 +2,15 @@ from ultralytics import YOLO
 
 if __name__ == "__main__":
     # Load a model
-    pth_path = r"D:\1_SHU_programming\SRM\ultralytics-main\datasets\runs\detect\train\weights\best.pt"
+    pth_path = r"D:\1_SHU_programming\4_Practising\ultralytics-main\tools\runs\detect\train2\weights\best.pt"
     # model = YOLO('yolov8n.pt')  # load an official model
     model = YOLO(pth_path)  # load a custom model
 
     # Validate the model
     metrics = model.val(
         val=True,  # (bool) 在训练期间进行验证/测试
-        data=r'data.yaml',
-        split='test',  # (str) 用于验证的数据集拆分，例如'val'、'test'或'train'
+        data=r'D:\1_SHU_programming\4_Practising\ultralytics-main\datasets\data.yaml',
+        split='val',  # (str) 用于验证的数据集拆分，例如'val'、'test'或'train'
         batch=16,  # (int) 每批的图像数量（-1 为自动批处理）
         imgsz=640,  # 输入图像的大小，可以是整数或w，h
         #device='',  # 运行的设备，例如 cuda device=0 或 device=0,1,2,3 或 device=cpu
