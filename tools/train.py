@@ -1,14 +1,14 @@
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO('yolov8n-mlca.yaml')  # build a new model from YAML
-#model = YOLO('../../yolov8n.pt')  # load a pretrained model (recommended for training)
+#model = YOLO('yolov8n-mlca.yaml')  # build a new model from YAML
+model = YOLO('yolov8n.pt')  # load a pretrained model (recommended for training)
 #model = YOLO('yolov8n-mlca.yaml').load('yolov8n.pt')  # build from YAML and transfer weights
 
 if __name__ == '__main__':
 
     model.train(
-        data=r'D:\1_SHU_programming\SRM\ultralytics-main\datasets\data.yaml',  # 训练数据集
+        data=r'D:\1_SHU_programming\4_Practising\ultralytics-main\datasets\data.yaml',  # 训练数据集
         epochs=100,  # 训练的轮数
         imgsz=640,  # 输入图像的大小
         batch=16,  # 每批的图像数量

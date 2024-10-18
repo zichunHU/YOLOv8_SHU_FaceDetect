@@ -2,7 +2,7 @@ from ultralytics import YOLO
 
 if __name__ == "__main__":
     # Load a model
-    pth_path = r"D:\1_SHU_programming\4_Practising\ultralytics-main\tools\runs\detect\train3\weights\best.pt"
+    pth_path = r"D:\1_SHU_programming\4_Practising\ultralytics-main\tools\runs\detect\train2\weights\best.pt"
     # model = YOLO('yolov8n.pt')  # load an official model
     model = YOLO(pth_path)  # load a custom model
 
