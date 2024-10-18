@@ -8,7 +8,7 @@ model = YOLO('yolov8n-mlca.yaml')  # build a new model from YAML
 if __name__ == '__main__':
 
     model.train(
-        data=r'D:\1_SHU_programming\SRM\ultralytics-main\datasets\data.yaml',  # 训练数据集
+        data=r'D:\1_SHU_programming\4_Practising\ultralytics-main\datasets\data.yaml',  # 训练数据集
         epochs=100,  # 训练的轮数
         imgsz=640,  # 输入图像的大小
         batch=16,  # 每批的图像数量
